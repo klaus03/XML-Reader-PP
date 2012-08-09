@@ -1,26 +1,21 @@
+package XML::Reader::PP;
+
 use 5.014;
 
 use strict;
 use warnings;
 
-use XML::Reader qw(XML::Parsepp);
-
-package XML::Reader::PP;
+use XML::Reader 0.48 qw(XML::Parsepp slurp_xml);
 
 require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT    = qw();
 our @EXPORT_OK = qw(slurp_xml);
-our $VERSION   = '0.01';
-
-*slurp_xml = \&XML::Reader::slurp_xml;
+our $VERSION   = '0.02';
 
 sub new {
     my $class = shift;
-
-    my $self = XML::Reader->new(@_);
-
-    $self;
+    XML::Reader->new(@_);
 }
 
 1;
@@ -33,7 +28,7 @@ XML::Reader::PP - Importing XML::Reader using XML::Parsepp
 
 =head1 SYNOPSIS
 
-XML::Reader:PP provides all the functionalities of XML::Reader using the pure perl parser
+XML::Reader::PP provides all the functionalities of XML::Reader using the pure perl parser
 XML::Parsepp.
 
   use XML::Reader::PP;

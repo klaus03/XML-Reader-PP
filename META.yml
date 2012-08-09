@@ -15,10 +15,10 @@ name: XML-Reader-PP
 provides:
   XML::Reader::PP:
     file: lib/XML/Reader/PP.pm
-    version: 0.01
+    version: 0.02
 requires:
   XML::Parsepp: 0.04
-  XML::Reader: 0.47
+  XML::Reader: 0.48
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
